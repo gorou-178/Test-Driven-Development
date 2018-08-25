@@ -21,6 +21,7 @@ class Money
      */
     public function equals(Money $money): bool
     {
-        return $this->amount === $money->amount;
+        return $this instanceof $money
+            && $this->amount === $money->amount;
     }
 }
