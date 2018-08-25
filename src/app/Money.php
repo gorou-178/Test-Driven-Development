@@ -34,6 +34,11 @@ abstract class Money
     abstract public function times(int $multiplier): Money;
 
     /**
+     * @return string
+     */
+    abstract public function currency(): string;
+
+    /**
      * @return integer
      */
     public function amount(): int
