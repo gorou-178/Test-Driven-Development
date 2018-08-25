@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Dollar;
+use App\Franc;
 
 abstract class Money
 {
@@ -14,6 +16,15 @@ abstract class Money
     public static function dollar(int $amount): Money
     {
         return new Dollar($amount);
+    }
+
+    /**
+     * @param integer $amount
+     * @return Money
+     */
+    public static function franc(int $amount): Money
+    {
+        return new Franc($amount);
     }
 
     /**

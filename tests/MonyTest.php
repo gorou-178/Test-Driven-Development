@@ -14,22 +14,22 @@ class MoneyTet extends TestCase
     public function testMultiplication()
     {
         $five = Money::dollar(5);
-        $this->assertEquals($five->times(2)->amount(), (new Dollar(10))->amount());
-        $this->assertEquals($five->times(3)->amount(), (new Dollar(15))->amount());
+        $this->assertEquals(Money::dollar(5)->times(2)->amount(), Money::dollar(10)->amount());
+        $this->assertEquals(Money::dollar(5)->times(3)->amount(), Money::dollar(15)->amount());
     }
 
     public function testEquality() {
-        $this->assertTrue((new Dollar(5))->equals(new Dollar(5)));
-        $this->assertFalse((new Dollar(5))->equals(new Dollar(6)));
-        $this->assertTrue((new Franc(5))->equals(new Franc(5)));
-        $this->assertFalse((new Franc(5))->equals(new Franc(6)));
-        $this->assertFalse((new Franc(5))->equals(new Dollar(5)));
+        $this->assertTrue(Money::dollar(5)->equals(Money::dollar(5)));
+        $this->assertFalse(Money::dollar(5)->equals(Money::dollar(6)));
+        $this->assertTrue(Money::franc(5)->equals(Money::franc(5)));
+        $this->assertFalse(Money::franc(5)->equals(Money::franc(6)));
+        $this->assertFalse(Money::franc(5)->equals(Money::dollar(5)));
     }
 
     public function testFrancMultiplication()
     {
-        $this->assertEquals((new Franc(5))->times(2)->amount(), (new Franc(10))->amount());
-        $this->assertEquals((new Franc(5))->times(3)->amount(), (new Franc(15))->amount());
+        $this->assertEquals(Money::franc(5)->times(2)->amount(), Money::franc(10)->amount());
+        $this->assertEquals(Money::franc(5)->times(3)->amount(), Money::franc(15)->amount());
     }
 
 }
