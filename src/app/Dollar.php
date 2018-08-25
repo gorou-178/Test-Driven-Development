@@ -2,8 +2,9 @@
 
 namespace App;
 
+use App\Money;
 
-class Dollar
+class Dollar extends Money
 {
     public $amount;
 
