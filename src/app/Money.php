@@ -12,6 +12,16 @@ abstract class Money
 
     /**
      * @param integer $amount
+     * @param string $currency
+     */
+    public function __construct(int $amount, string $currency)
+    {
+        $this->amount = $amount;
+        $this->currency = $currency;
+    }
+
+    /**
+     * @param integer $amount
      * @return Money
      */
     public static function dollar(int $amount): Money

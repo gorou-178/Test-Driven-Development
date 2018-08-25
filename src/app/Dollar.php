@@ -7,16 +7,6 @@ use App\Money;
 class Dollar extends Money
 {
     /**
-     * @param integer $amount
-     * @param string $currency
-     */
-    public function __construct(int $amount, string $currency)
-    {
-        $this->amount = $amount;
-        $this->currency = $currency;
-    }
-
-    /**
      * @param integer $multiplier
      * @return Money
      */
