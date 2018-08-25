@@ -12,8 +12,8 @@ class MoneyTet extends TestCase
 
     public function testMultiplication()
     {
-        $this->assertEquals((new Dollar(5))->times(2)->amount, (new Dollar(10))->amount);
-        $this->assertEquals((new Dollar(5))->times(3)->amount, (new Dollar(15))->amount);
+        $this->assertEquals((new Dollar(5))->times(2)->amount(), (new Dollar(10))->amount());
+        $this->assertEquals((new Dollar(5))->times(3)->amount(), (new Dollar(15))->amount());
     }
 
     public function testEquality() {
@@ -23,8 +23,8 @@ class MoneyTet extends TestCase
 
     public function testFrancMultiplication()
     {
-        $this->assertEquals((new Franc(5))->times(2)->amount, (new Franc(10))->amount);
-        $this->assertEquals((new Franc(5))->times(3)->amount, (new Franc(15))->amount);
+        $this->assertEquals((new Franc(5))->times(2)->amount(), (new Franc(10))->amount());
+        $this->assertEquals((new Franc(5))->times(3)->amount(), (new Franc(15))->amount());
     }
 
 }
