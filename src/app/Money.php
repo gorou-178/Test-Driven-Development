@@ -3,9 +3,24 @@
 namespace App;
 
 
-class Money
+abstract class Money
 {
     protected $amount;
+
+    /**
+     * @param integer $amount
+     * @return Money
+     */
+    public static function dollar(int $amount): Money
+    {
+        return new Dollar($amount);
+    }
+
+    /**
+     * @param integer $multiplier
+     * @return Money
+     */
+    abstract public function times(int $multiplier): Money;
 
     /**
      * @return integer

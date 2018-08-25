@@ -5,6 +5,7 @@ namespace tests;
 
 use App\Dollar;
 use App\Franc;
+use App\Money;
 use PHPUnit\Framework\TestCase;
 
 class MoneyTet extends TestCase
@@ -12,8 +13,9 @@ class MoneyTet extends TestCase
 
     public function testMultiplication()
     {
-        $this->assertEquals((new Dollar(5))->times(2)->amount(), (new Dollar(10))->amount());
-        $this->assertEquals((new Dollar(5))->times(3)->amount(), (new Dollar(15))->amount());
+        $five = Money::dollar(5);
+        $this->assertEquals($five->times(2)->amount(), (new Dollar(10))->amount());
+        $this->assertEquals($five->times(3)->amount(), (new Dollar(15))->amount());
     }
 
     public function testEquality() {
