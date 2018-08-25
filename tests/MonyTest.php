@@ -19,7 +19,7 @@ class MoneyTet extends TestCase
     }
 
     public function testEquality() {
-        $this->assertTrue(new Dollar(5).equals(new Dollar(5)));
+        $this->assertTrue((new Dollar(5))->equals(new Dollar(5)));
     }
 
 
