@@ -16,7 +16,7 @@ abstract class Money
      */
     public static function dollar(int $amount): Money
     {
-        return new Dollar($amount);
+        return new Dollar($amount, "USD");
     }
 
     /**
@@ -25,7 +25,7 @@ abstract class Money
      */
     public static function franc(int $amount): Money
     {
-        return new Franc($amount);
+        return new Franc($amount, "CHF");
     }
 
     /**
