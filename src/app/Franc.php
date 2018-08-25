@@ -6,12 +6,15 @@ use App\Money;
 
 class Franc extends Money
 {
+    private $currency;
+
     /**
      * @param integer $amount
      */
     public function __construct(int $amount)
     {
         $this->amount = $amount;
+        $this->currency = "CHF";
     }
 
     /**
@@ -28,6 +31,6 @@ class Franc extends Money
      */
     public function currency(): string
     {
-        return "CHF";
+        return $this->currency;
     }
 }

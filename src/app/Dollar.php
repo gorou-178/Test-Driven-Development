@@ -6,12 +6,15 @@ use App\Money;
 
 class Dollar extends Money
 {
+    private $currency;
+
     /**
      * @param integer $amount
      */
     public function __construct(int $amount)
     {
         $this->amount = $amount;
+        $this->currency = "USD";
     }
 
     /**
@@ -28,6 +31,6 @@ class Dollar extends Money
      */
     public function currency(): string
     {
-        return "USD";
+        return $this->currency;
     }
 }
