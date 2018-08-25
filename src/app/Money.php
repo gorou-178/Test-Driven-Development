@@ -8,6 +8,7 @@ use App\Franc;
 abstract class Money
 {
     protected $amount;
+    protected $currency;
 
     /**
      * @param integer $amount
@@ -36,7 +37,10 @@ abstract class Money
     /**
      * @return string
      */
-    abstract public function currency(): string;
+    public function currency(): string
+    {
+        return $this->currency;
+    }
 
     /**
      * @return integer

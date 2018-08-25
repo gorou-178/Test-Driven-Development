@@ -2,9 +2,6 @@
 
 namespace tests;
 
-
-use App\Dollar;
-use App\Franc;
 use App\Money;
 use PHPUnit\Framework\TestCase;
 

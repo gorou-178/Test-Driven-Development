@@ -6,8 +6,6 @@ use App\Money;
 
 class Dollar extends Money
 {
-    private $currency;
-
     /**
      * @param integer $amount
      */
@@ -24,13 +22,5 @@ class Dollar extends Money
     public function times(int $multiplier): Money
     {
         return new Dollar($this->amount * $multiplier);
-    }
-
-    /**
-     * @return string
-     */
-    public function currency(): string
-    {
-        return $this->currency;
     }
 }
