@@ -2,8 +2,9 @@
 
 namespace App;
 
+use App\Money;
 
-class Franc
+class Franc extends Money
 {
     public $amount;
 
@@ -23,14 +24,4 @@ class Franc
     {
         return new Franc($this->amount * $multiplier);
     }
-
-    /**
-     * @param Franc $franc
-     * @return bool
-     */
-    public function equals(Franc $franc): bool
-    {
-        return $this->amount === $franc->amount;
-    }
-
 }

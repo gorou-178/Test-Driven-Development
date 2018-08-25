@@ -6,8 +6,6 @@ use App\Money;
 
 class Dollar extends Money
 {
-    public $amount;
-
     /**
      * @param integer $amount
      */
@@ -24,14 +22,4 @@ class Dollar extends Money
     {
         return new Dollar($this->amount * $multiplier);
     }
-
-    /**
-     * @param Dollar $dollar
-     * @return bool
-     */
-    public function equals(Dollar $dollar): bool
-    {
-        return $this->amount === $dollar->amount;
-    }
-
 }
