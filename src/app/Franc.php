@@ -6,8 +6,6 @@ use App\Money;
 
 class Franc extends Money
 {
-    public $amount;
-
     /**
      * @param integer $amount
      */
